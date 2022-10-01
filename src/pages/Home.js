@@ -22,7 +22,7 @@ export default function Home(){
             <div className={"md:col-start-1 md:col-span-8 mx-4"}>
                 <h1 className={"md:text-8xl text-7xl md:mx-0 font-normal font-poppins md:mt-20 mt-8 mb-16"}>Ostatnie posty</h1>
                 {posts && posts.map((post) => (
-                    <ArticleLink key={post.id} id={post.id} title={post.title} content={post.content.markdown} img={post.image.url}/>
+                    <ArticleLink key={post.id} id={post.id} title={post.title} content={post.content.html} img={post.image.url}/>
                 ))}
                 <div className={"flex justify-center"}>
                     <Button text={'Więcej? Bibioteka'} link={'/library'}/>
