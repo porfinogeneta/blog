@@ -1,8 +1,9 @@
 import {Link} from "react-router-dom";
 
-export default function Button({text, link=''}) {
+export default function Button({text, link='', handleClick}) {
+
     return (
-        <button className={"flex w-fit btn-main items-center gap-4 my-4"}>
+        <button className={"flex w-fit btn-main items-center gap-4 my-4"} onClick={handleClick}>
             {link !== '' ? (
             <Link to={link}>
                 <div className={"flex items-center gap-2"}>

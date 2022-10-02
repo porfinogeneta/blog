@@ -13,7 +13,6 @@ export default function Article(){
     };
 
     const prepareContent = () => {
-        console.log(article.content.html.replace(/<br>/g," "))
         return article.content.html.replace(/<br>/g," ");
     }
 

@@ -6,6 +6,7 @@ import Home from "./pages/Home"
 import Footer from "./components/Footer";
 import Library from "./pages/Library";
 import Article from "./pages/Article";
+import Search from "./pages/Search";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
                 <Route path={'/library'} element={<Library/>}></Route>
                 <Route path={'/'} element={<Home/>}></Route>
                 <Route path={'/article/:id'} element={<Article/>}></Route>
+                <Route path={'/search'} element={<Search/>}></Route>
             </Routes>
           </div>
           <Footer/>

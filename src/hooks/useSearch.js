@@ -1,37 +1,33 @@
 import {useEffect, useState} from "react";
 import {request} from "graphql-request";
 
-export const useFetchAllPosts = () => {
+export const useSearch = (query) => {
 
-    const [posts, setPosts] = useState()
+    const [results, setResults] = useState('')
 
     useEffect(() => {
-        const fetchPosts = async () => {
-            const { blogPosts } = await request(
+        const fetch = async () => {
+            const {blogPosts} = await request(
                 'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cl8q1ogzi24px01tcgvzg846i/master',
                 `
                 {
-                  blogPosts {
-                    createdAt
+                  blogPosts (where: { _search: "${query}" } orderBy: createdAt_DESC) {
                     id
-                    publishedAt
                     title
                     updatedAt
                     image {
-                      url
+                        url
                     }
                     content {
                       html
                     }
                   }
-              }
+                }
             `
             )
-            console.log(blogPosts)
-            setPosts(blogPosts)
+            setResults(blogPosts)
         }
-        fetchPosts()
-
-    }, [])
-    return {posts}
+        fetch()
+    }, [query])
+    return { results }
 }
