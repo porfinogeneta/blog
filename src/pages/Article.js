@@ -34,8 +34,10 @@ export default function Article(){
                             </svg>
                         </div>
                     </div>
-                    <article id={"article"} className={"md:w-1/2 md:mx-auto font-osans font-normal text-xl my-20 md:mx-32 mx-4"} dangerouslySetInnerHTML={{__html: prepareContent()}}>
-                    </article>
+
+                    <div id={"article"} className={"md:w-1/2 md:mx-auto font-osans font-normal text-xl my-20 md:mx-32 mx-4"} dangerouslySetInnerHTML={{__html: prepareContent()}}>
+
+                    </div>
                 </>
             )}
         </div>

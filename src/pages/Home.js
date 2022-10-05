@@ -30,7 +30,7 @@ export default function Home(){
 
             </div>
             <aside className={"flex flex-col  col-start-10 col-span-3 md:border-l-2 md:border-t-0 border-t-2 border-accent"}>
-                <h6 className={"mt-20 font-poppins text-2xl font-medium text-left mx-4 md:ml-16"}>O mnie</h6>
+                <h6 className={"mt-20 font-poppins dark:text-white-3 text-on-primary-3  text-2xl font-medium text-left mx-4 md:ml-16"}>O mnie</h6>
                 <div className={"mx-auto"}>
                     <img className={"rounded-full w-56"} src={"https://scontent-frt3-1.xx.fbcdn.net/v/t39.30808-1/287570992_1704335043270494_1065019229497455247_n.jpg?stp=dst-jpg_p100x100&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=G34HNH21psgAX__bGl1&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-frt3-1.xx&oh=00_AT_JDdCi8Ft9TczEErNpz-HQhPWfQW7SOv-u1DWzTczLpg&oe=633AB1BE"} alt={"my-profile"}/>
                 </div>

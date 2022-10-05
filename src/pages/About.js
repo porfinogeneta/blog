@@ -8,10 +8,10 @@ export default function About() {
             </div>
             <section className={"md:w-2/3 mx-4  md:mx-0 flex gap-4 md:gap-16 flex-col"}>
                 <h3 className={
-                    "text-4xl font-medium welcome font-poppins"}>
+                    " font-medium welcome font-poppins"}>
                     Witaj, jestem Karol Roman
                 </h3>
-                <p className={"font-osans text-xl font-normal md:w-4/5"}>
+                <p className={"font-osans font-normal md:w-4/5"}>
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor
                 </p>
                 <Button text={'Więcej'} link={'/'}/>

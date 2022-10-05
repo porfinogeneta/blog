@@ -8,7 +8,7 @@ export default function Date({date}){
     }
 
     return (
-        <p className={"font-osans text-on-primary-1 font-normal"}>
+        <p className={"font-osans dark:text-on-primary-1 text-on-primary-1 font-normal"}>
             {setUpDate()}
         </p>
     )

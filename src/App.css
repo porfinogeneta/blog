@@ -2,16 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@200;500&family=Rubik&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@300;400&display=swap');
 
+body, .dark{
+  margin: 0;
+  padding: 0;
+  background: #171716;
+  min-height: 100vh;
+  color:#FFEEF4;;
+}
+
 body {
   margin: 0;
   padding: 0;
   background: #FFFBF3;
+  min-height: 100vh;
+  color: #0D0C0B;
 }
+
 .logo {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 59px;
+  font-size: 50px;
   line-height: 88px;
   letter-spacing: 8px;
   color: #0D0C0B;
@@ -21,7 +32,7 @@ body {
   .logo {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 33px;
     line-height: 49px;
     display: flex;
@@ -50,11 +61,10 @@ body {
   padding: 8px 24px 8px 24px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  color: #0D0C0B;
-}
+
+
+
+
 h1 {
   font-size: 4.5rem; /* 72px */
   line-height: 1;
@@ -80,11 +90,24 @@ h6{
   font-size: 1.5rem; /* 24px */
   line-height: 2rem;
 }
-p, article, span {
+p, article, span, li {
   font-family: 'Open Sans', sans-serif;
   color: #0D0C0B;
   font-size: 1.25rem; /* 20px */
   line-height: 1.75rem;
+}
+
+.dark p, article, span, li {
+  font-family: 'Open Sans', sans-serif;
+  color: #FFEEF4;
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem;
+}
+
+
+ h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
 }
 
 #article h1, #article h2, #article h3, #article h4, #article h5, #article h6 {

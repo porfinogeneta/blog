@@ -4,7 +4,8 @@ import Date from "./Date";
 export default function ArticleLink({id, title, content, img, date}) {
 
     const characters = (string) => {
-        const new_string = string.replace(/<br>/g," ");
+        // prepare string to show
+        const new_string = string.replace(/<img[^>]*>/gi,"").replace(/<br>/gi," ");
         if (new_string.length > 250 ){
             return new_string.substring(0, 250) + '...'
         }else {
@@ -27,7 +28,7 @@ export default function ArticleLink({id, title, content, img, date}) {
                     <Readmore link={'/article/' + id}/>
                 </div>
             </div>
-            <div className={"col-start-7 col-span-3 p-4"}>
+            <div className={"col-start-7 col-span-3 p-4 self-center"}>
                 <img className={"rounded-2xl"} src={img} alt={"intro"}/>
             </div>
         </div>
