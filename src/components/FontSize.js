@@ -5,7 +5,7 @@ export default function FontSize(){
     const { changeFontSize } = useTheme()
 
     const handleClick = () => {
-        changeFontSize()
+        return changeFontSize()
     }
 
     return (
