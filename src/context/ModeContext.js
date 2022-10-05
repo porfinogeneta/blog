@@ -24,7 +24,6 @@ export function ModeProvider({children}) {
     }
 
     const changeFontSize = () => {
-        console.log('sising')
         if (state.size === 4){
             dispatch({ type: 'CHANGE_FONT', payload: 0 })
         }else{
