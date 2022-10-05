@@ -17,6 +17,7 @@ function App() {
 
     const sizes = useRef(['smaller', 'small', 'normal', 'big', 'bigger'])
 
+
     useEffect(() => {
         if (sizes[size] === 'smaller'){
             document.documentElement.style.fontSize = '70%'
