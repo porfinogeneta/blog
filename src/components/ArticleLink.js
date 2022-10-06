@@ -28,7 +28,7 @@ export default function ArticleLink({id, title, content, img, date}) {
                     <Readmore link={'/article/' + id}/>
                 </div>
             </div>
-            <div className={"col-start-7 col-span-3 p-4 self-center"}>
+            <div className={"col-start-7 col-span-3 p-4 flex justify-center self-center"}>
                 <img className={"rounded-2xl"} src={img} alt={"intro"}/>
             </div>
         </div>

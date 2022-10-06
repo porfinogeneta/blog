@@ -16,6 +16,7 @@ export const useFetchOnePost = (id) => {
                             title
                             content{
                               html
+                              text
                             }
                             title
                           }

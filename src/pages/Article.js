@@ -1,5 +1,6 @@
 import {useParams} from "react-router-dom";
 import {useFetchOnePost} from "../hooks/useFetchOnePost";
+import {Helmet} from "react-helmet";
 
 export default function Article(){
 
@@ -16,11 +17,20 @@ export default function Article(){
         return article.content.html.replace(/<br>/g," ");
     }
 
+    const description = () => {
+        return (article.content.text).slice(0, 150).replace(/\r?\n|\r/g, " ");
+    }
+
     return (
 
         <div>
             {article && (
                 <>
+                    <Helmet>
+                        <title>{article.title}</title>
+                        <meta name={"description"} content={description()}/>
+                        <meta name={"keywords"} content={"blog, RPG, fabuła, artykuł"}/>
+                    </Helmet>
                     <div className={"relative w-screen h-screen"}>
                         <div className={"absolute top-0 bg-secondary w-full h-full"}></div>
                         <img className={"opacity-70 object-cover w-full h-full "} src={"https://image.lexica.art/md/5a36952d-e6ff-46c6-9ad6-954d2f162bf8"} alt={"article"}/>

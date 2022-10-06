@@ -8,34 +8,40 @@ import Library from "./pages/Library";
 import Article from "./pages/Article";
 import Search from "./pages/Search";
 import {useTheme} from "./hooks/useTheme";
-import {useEffect, useRef} from "react";
+import {useEffect} from "react";
+import {Helmet} from "react-helmet";
 
 function App() {
 
     const { mode, size } = useTheme()
 
 
-    const sizes = useRef(['smaller', 'small', 'normal', 'big', 'bigger'])
 
 
     useEffect(() => {
+        const sizes =['smaller', 'small', 'normal', 'big', 'bigger']
         if (sizes[size] === 'smaller'){
             document.documentElement.style.fontSize = '70%'
         }else if (sizes[size] === 'small'){
             document.documentElement.style.fontSize = '90%'
-        }else if (sizes[size] === 'normal'){
-            document.documentElement.style.fontSize = '100%'
+        }else if (sizes[size] === 'bigger'){
+            document.documentElement.style.fontSize = '140%'
         }else if (sizes[size] === 'big'){
             document.documentElement.style.fontSize = '120%'
         }else {
-            document.documentElement.style.fontSize = '140%'
+            document.documentElement.style.fontSize = '100%'
         }
-    }, [size, sizes])
+    }, [size])
 
 
 
     return (
-      <div className={`app ${mode} ${sizes[size]}`}>
+      <div className={`app ${mode} `}>
+          <Helmet>
+              <title>Strona główna</title>
+              <meta name={"description"} content={"Blog o RPG"}/>
+              <meta name={"keywords"} content={"blog, RPG, fabuła, artykuł"}/>
+          </Helmet>
         <Navbar/>
         <Routes>
             <Route path={'/about'} element={<About/>}></Route>

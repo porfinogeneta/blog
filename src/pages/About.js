@@ -1,9 +1,16 @@
 import Button from "../components/Button";
+import {Helmet} from "react-helmet";
 
 export default function About() {
     return (
-        <div className={"flex md:flex-row flex-col items-center justify-center gap-16 md:mx-32 my-16 md:mt-48 md:mb-40"}>
-            <div className={"md:w-1/3 w-3/4 flex justify-end"}>
+        <div className={"flex md:flex-row sm:flex-col flex-col items-center justify-center gap-16 md:mx-32 my-16 md:mt-48 md:mb-40"}>
+            <Helmet>
+                <title>O mnie</title>
+                <meta name={"description"} content={"Wszystko o autorze"}/>
+                <meta name={"keywords"} content={"o mnie, o twórcy"}/>
+                <meta name={"keywords"} content={'o twórcy, RPG, kim jestem'}/>
+            </Helmet>
+            <div className={"md:w-1/3 w-3/4 flex md:justify-start sm-w-3/4 justify-center"}>
                 <img className={"rounded-full w-96"} src={"https://scontent-frt3-1.xx.fbcdn.net/v/t39.30808-1/287570992_1704335043270494_1065019229497455247_n.jpg?stp=dst-jpg_p100x100&_nc_cat=102&ccb=1-7&_nc_sid=7206a8&_nc_ohc=G34HNH21psgAX__bGl1&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent-frt3-1.xx&oh=00_AT_JDdCi8Ft9TczEErNpz-HQhPWfQW7SOv-u1DWzTczLpg&oe=633AB1BE"} alt={"profile"}/>
             </div>
             <section className={"md:w-2/3 mx-4  md:mx-0 flex gap-4 md:gap-16 flex-col"}>

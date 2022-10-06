@@ -4,6 +4,7 @@ import {useFetchMultiplePosts} from "../hooks/useFetchMultiplePosts";
 import {useState} from "react";
 import {useFetchLastPost} from "../hooks/useFetchLastPost";
 import Searchbar from "../components/Searchbar";
+import {Helmet} from "react-helmet";
 
 // const posts = [
 //     {id: 1,title: 'Example Title',content: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerceniam, quis nostrud exerceniam, quis nostrud exerceniam, quis nostrud exerceniam, quis nostrud exercitation ullamco laboris nisi ut ali', img: "https://image.lexica.art/md/5a36952d-e6ff-46c6-9ad6-954d2f162bf8"},
@@ -31,6 +32,12 @@ export default function Library() {
 
     return (
         <section className={"md:mx-32 my-24"}>
+            <Helmet>
+                <title>Biblioteka</title>
+                <meta name={"description"} content={"Biblioteka ze wszystkimi artykułami, moimi blogami"}/>
+                <meta name={"keywords"} content={"biblioteka, artykuły, moje projekty"}/>
+                {posts && (<meta name={"keywords"} content={`${posts.map(elem => elem.title)}`}/>)}
+            </Helmet>
             <Searchbar/>
             {posts && (
                 <>

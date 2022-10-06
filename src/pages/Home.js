@@ -2,6 +2,7 @@ import Readmore from "../components/Readmore";
 import ArticleLink from "../components/ArticleLink";
 import Button from "../components/Button";
 import {useFetchMultiplePosts} from "../hooks/useFetchMultiplePosts";
+import {Helmet} from "react-helmet";
 //
 // const posts = [
 //     {id: 1,title: 'Example Title',content: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerceniam, quis nostrud exerceniam, quis nostrud exerceniam, quis nostrud exerceniam, quis nostrud exercitation ullamco laboris nisi ut ali', img: "https://image.lexica.art/md/5a36952d-e6ff-46c6-9ad6-954d2f162bf8"},
@@ -19,6 +20,12 @@ export default function Home(){
 
     return (
         <div className={"md:mx-32 md:grid md:grid-cols-12"}>
+            <Helmet>
+                <title>Karol Roman Blog</title>
+                <meta name={"description"} content={"Blog Z RPG"}/>
+                <meta name={"keywords"} content={"blog, RPG, fabuła, strona główna"}/>
+                {posts && (<meta name={"keywords"} content={`${posts.map(elem => elem.title)}`}/>)}
+            </Helmet>
             <div className={"md:col-start-1 md:col-span-8 mx-4"}>
                 <h1 className={"md:text-8xl text-7xl md:mx-0 font-normal font-poppins md:mt-20 mt-8 mb-16"}>Ostatnie posty</h1>
                 {posts && posts.map((post) => (
