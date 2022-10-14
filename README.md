@@ -1,5 +1,5 @@
 # Project inro
-This is a simple blog app for my friend. The main objective of this project was to get introduced to the concept of Graphql and HygephCMS.
+This is a simple blog app for my friend. The main objective of this project was to get introduced to the concept of Graphql and HygraphCMS.
 
 # Technologies involved
  - React
