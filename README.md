@@ -1,4 +1,18 @@
-# Getting Started with Create React App
+# Project inro
+This is a simple blog app for my friend. The main objective of this project was to get introduced to the concept of Graphql and HygephCMS.
+
+# Technologies involved
+ - React
+ - Tailwind CSS
+ - Graphql
+ - Hygraph CMS
+
+# Sample screenshots
+
+
+
+
+# Creating project with React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
