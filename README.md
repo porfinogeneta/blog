@@ -12,7 +12,7 @@ This is a simple blog app for my friend. The main objective of this project was 
 <img src="https://user-images.githubusercontent.com/59926641/195826726-f9c8c425-04fe-41d1-a0c3-7be417921448.png" alt="screenshot">
 
 ## Dark mode
-<img src="https://user-images.githubusercontent.com/59926641/195826726-f9c8c425-04fe-41d1-a0c3-7be417921448.png" alt="screenshot">
+<img src="https://user-images.githubusercontent.com/59926641/195826695-132a29e9-7442-482d-9b09-b16e22d812bc.png" alt="screenshot">
 
 
 
